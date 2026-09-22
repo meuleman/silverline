@@ -41,10 +41,16 @@
 
 <h2>Permissions</h2>
 <p>
-  Placard requests no Android permissions at all. It has no access to your
-  storage, camera, microphone, contacts, location, or network. You can confirm
-  this yourself: open the app's entry in the Google Play listing and look at the
-  permissions section, or check App info on your device.
+  Placard requests no permissions that give it access to anything of yours:
+  not your storage, camera, microphone, contacts, location, or network. You
+  will never be asked to grant Placard a permission.
+</p>
+<p>
+  If you inspect the app's manifest, you may see one entry ending in
+  <code>DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</code>. It is added
+  automatically by Google's Android support library, grants access to nothing,
+  and exists only to keep the app's internal messages private on older
+  versions of Android.
 </p>
 
 <h2>Network access</h2>
